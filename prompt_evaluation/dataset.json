@@ -1,0 +1,11 @@
+[
+  {
+    "task": "Write a Python function that validates an AWS S3 bucket name according to AWS naming rules (3-63 characters, lowercase letters, numbers, hyphens only, must start and end with letter or number)"
+  },
+  {
+    "task": "Write a regular expression to extract AWS ARN resource names from a string. ARNs follow the format: arn:aws:service:region:account-id:resource-type/resource-id"
+  },
+  {
+    "task": "Write a Python function that parses an AWS CloudWatch log timestamp string (format: '2024-01-15T10:30:45.123Z') and returns the hour of the day as an integer"
+  }
+]
