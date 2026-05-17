@@ -1,11 +1,17 @@
 [
   {
-    "task": "Write a Python function that validates an AWS S3 bucket name according to AWS naming rules (3-63 characters, lowercase letters, numbers, hyphens only, must start and end with letter or number)"
+    "task": "Parse an AWS S3 bucket name from a full S3 URI path (e.g., 's3://my-bucket/folder/file.txt') and extract just the bucket name",
+    "format": "Regex",
+    "solution_criteria": "A regular expression that captures only the bucket name portion between 's3://' and the first forward slash, ignoring any paths or file names that follow"
   },
   {
-    "task": "Write a regular expression to extract AWS ARN resource names from a string. ARNs follow the format: arn:aws:service:region:account-id:resource-type/resource-id"
+    "task": "Convert an AWS CloudWatch log entry timestamp from Unix epoch milliseconds to a human-readable ISO 8601 format string",
+    "format": "Python",
+    "solution_criteria": "A Python function that accepts a Unix epoch timestamp in milliseconds, converts it to seconds, and returns a formatted ISO 8601 datetime string in UTC timezone"
   },
   {
-    "task": "Write a Python function that parses an AWS CloudWatch log timestamp string (format: '2024-01-15T10:30:45.123Z') and returns the hour of the day as an integer"
+    "task": "Create a JSON configuration template for an AWS Lambda function that specifies runtime, timeout, memory allocation, and environment variables",
+    "format": "JSON",
+    "solution_criteria": "A valid JSON object containing required Lambda configuration fields including runtime (e.g., 'python3.11'), timeout in seconds, memory in MB, and an object for environment variables with at least one example variable"
   }
 ]

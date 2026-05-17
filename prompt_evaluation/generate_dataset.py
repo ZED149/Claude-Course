@@ -5,7 +5,7 @@ from anthropic import Anthropic
 import os
 import json
 
-load_dotenv(dotenv_path=".env")
+load_dotenv(dotenv_path="C:/Users/salma/OneDrive/Desktop/Claude Course/.env")
 API_KEY = os.getenv("API_KEY")
 model = "claude-haiku-4-5"
 client = Anthropic(api_key=API_KEY)
@@ -45,7 +45,7 @@ def add_assitant_message(messages, text):
 def chat(messages, system=None, temperature=1.0, stop_sequences=None):
     params = {
         "model": model,
-        "max_tokens": 300,
+        "max_tokens": 1000,
         "temperature": temperature,
         "messages": messages
     }
@@ -74,6 +74,8 @@ Example output:
 [
     {
         "task": "Description of task",
+        "format": "Specify the format here, like Python, JSON or regex",
+        "solution_criteria": "Key criteria on what a good solution looks like and dont include any code, just plain english to be understood"
     },
     ...additional
 ]
@@ -98,5 +100,5 @@ Please generate 3 objects.
 dataset = generate_dataset()
 
 # writing that data set to a file
-with open("prompt_evaluation/dataset.json", "w+") as file:
+with open("dataset.json", "w") as file:
     file.write(json.dumps(dataset, indent=2))
