@@ -11,7 +11,7 @@ load_dotenv("C:/Users/salma/OneDrive/Desktop/Claude Course/.env")
 
 model = "claude-sonnet-4-6"
 max_tokens = 1000
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.getenv("CLAUDE_API_KEY")
 
 # initializing anthropic client
 client = Anthropic(api_key=API_KEY)
