@@ -14,9 +14,33 @@ docs = {
 }
 
 
+# Read document
+@mcp.tool(
+    name="read_doc_contents",
+    description="Read the contents of a document and returns it as a string"
+)
+def read_document(
+    doc_id: str = Field(description="ID of the document to read")
+):
+    if doc_id not in docs:
+        raise ValueError(f"doc ID {doc_id} does not exists.")
+    return docs[doc_id]
 
-# TODO: Write a funtion to read document
-# TODO: Write a fucntion to write document
+
+# Write document
+@mcp.tool(
+    name="write_doc_contens",
+    description="Write the contents to the document"
+)
+def write_document(
+    doc_id: str = Field(description="ID of the document"),
+    content: str = Field(description="Contents to write on the document")
+):
+    if doc_id not in docs:
+        raise ValueError(f"doc id {doc_id} not found")
+    docs[doc_id].append("\n" + content)
+
+
 # TODO: Write a resource to return all doc id's
 # TODO: Write a resource to return the contents of a particular doc
 # TODO: Write a prompt to rewrite a doc in markdown format
